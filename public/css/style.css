@@ -2,3 +2,20 @@ body {
     background-color: #1a1d21;
     color: antiquewhite;
 }
+
+.login-container {
+    background-color: #2e3236;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    width: max(80%, 600px);
+}
+
+.card {
+    background-color: #1a1d21;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
