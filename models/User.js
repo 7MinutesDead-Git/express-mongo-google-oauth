@@ -21,5 +21,5 @@ const UserSchema = new mongoose.Schema({
     }
 })
 
-// Want to export this schema specifically as a mongoose model.
+// We want to export this schema specifically as a mongoose model.
 module.exports = mongoose.model('User', UserSchema)
