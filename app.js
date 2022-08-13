@@ -8,16 +8,18 @@ const hb = require('express-handlebars')
 const session = require('express-session')
 // https://www.passportjs.org/packages/passport-google-oauth20/
 const passport = require('passport')
-// -----------------------------------------------------
-// Configs
-const connectDB = require('./config/db')
-require('config/passport')(passport)
 
 // -----------------------------------------------------
 // Set our environment variables based on the config files we created.
 dotenv.config({ path: './config/config.env' })
 const PORT = process.env.PORT || 6900
 const app = express()
+
+// -----------------------------------------------------
+// Configs
+const connectDB = require('./config/db')
+// Passing in passport into the config file as a parameter (Check out config/passport.js).
+require('./config/passport')(passport)
 
 
 // -----------------------------------------------------
@@ -58,6 +60,7 @@ app.use(passport.session)
 // NOTE: Remember to export the router from the routes/index.js file, since we're
 // requiring it here.
 app.use('/', require('./routes/index'))
+app.use('/auth', require('./routes/auth'))
 
 // -----------------------------------------------------
 app.listen(PORT, async () => {
