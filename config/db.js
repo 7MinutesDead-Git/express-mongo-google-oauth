@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 async function connectDB() {
+    console.log('Connecting to database...')
     try {
         // From Mongoose 6 docs:
         // https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options
