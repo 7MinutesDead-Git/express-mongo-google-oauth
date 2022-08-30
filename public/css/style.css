@@ -19,3 +19,30 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.navbar {
+    background-color: #090d11;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+}
+.navbar a {
+    color: antiquewhite;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    width: min(100%, 10rem);
+    text-align: center;
+}
+.navbar a:hover {
+    color: #ff6c80;
+    text-decoration: dotted;
+    background: #040408;
+}
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
